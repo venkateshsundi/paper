@@ -151,7 +151,7 @@ rain_trmm(4,7) = avg_rain_eval(tdec,lat1_TRMM,lon1_TRMM,10,12,77,79 );
 rain_trmm(5,7) = avg_rain_eval(tdec,lat1_TRMM,lon1_TRMM,22,24,76,78 );
 rain_trmm(6,7) = avg_rain_eval(tdec,lat1_TRMM,lon1_TRMM,33,35,76,78 );
 
-%% graph region vs months for imd
+%% graph region vs months for trmm
 figure,bar(rain_trmm','DisplayName','rain_trmm'),legend('rajastan','bihar','maharashtra','tamilnadu','madhya pradesh','jammu and kashmir'),title('TRMM -precipitation in mm - region (vs) month '),xlabel('months'),ylabel('precipitation');
 
 %% CMORPH
@@ -221,7 +221,7 @@ rain_cmorph(4,7) = avg_rain_eval(cdec,lat1_cmorph,lon1_cmorph,10,12,77,79 );
 rain_cmorph(5,7) = avg_rain_eval(cdec,lat1_cmorph,lon1_cmorph,22,24,76,78 );
 rain_cmorph(6,7) = avg_rain_eval(cdec,lat1_cmorph,lon1_cmorph,33,35,76,78 );
  
-%% graph region vs months for imd
+%% graph region vs months for cmorph
 figure,bar(rain_cmorph','DisplayName','rain_cmorph'),legend('rajastan','bihar','maharashtra','tamilnadu','madhya pradesh','jammu and kashmir'),title('CMORPH -precipitation in mm - region (vs) month '),xlabel('months'),ylabel('precipitation');
 
 %% perssian
@@ -292,10 +292,34 @@ rain_perssian(4,7) = avg_rain_eval(pdec,lat1_perssian,lon1_perssian,10,12,77,79 
 rain_perssian(5,7) = avg_rain_eval(pdec,lat1_perssian,lon1_perssian,22,24,76,78 );
 rain_perssian(6,7) = avg_rain_eval(pdec,lat1_perssian,lon1_perssian,33,35,76,78 );
  
-%% graph region vs months for imd
+%% graph region vs months for persian
 figure,bar(rain_perssian','DisplayName','rain_perssian'),legend('rajastan','bihar','maharashtra','tamilnadu','madhya pradesh','jammu and kashmir'),title('PERSSIAN -precipitation in mm - region (vs) month '),xlabel('months'),ylabel('precipitation');
 
 
+%% graph 3 product vs month for all regions
+% region 1
+reg1 = [rain_imd(1,:);rain_trmm(1,:);rain_cmorph(1,:);rain_perssian(1,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 1 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
+
+% region 2
+reg1 = [rain_imd(2,:);rain_trmm(2,:);rain_cmorph(2,:);rain_perssian(2,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 2 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
+
+% region 3
+reg1 = [rain_imd(3,:);rain_trmm(3,:);rain_cmorph(3,:);rain_perssian(3,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 3 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
+
+% region 4
+reg1 = [rain_imd(4,:);rain_trmm(4,:);rain_cmorph(4,:);rain_perssian(4,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 4 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
+
+% region 5
+reg1 = [rain_imd(5,:);rain_trmm(5,:);rain_cmorph(5,:);rain_perssian(5,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 5 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
+
+% region 6
+reg1 = [rain_imd(6,:);rain_trmm(6,:);rain_cmorph(6,:);rain_perssian(6,:)];
+figure,bar(reg1','DisplayName','reg1'),legend('IMD','TRMM','CMORPH','PERSSIAN'),title('REGION 6 :precipitation in mm (vs) month '),xlabel('months'),ylabel('precipitation');
 
 % month = june;
 % des_lowlat = 26;
