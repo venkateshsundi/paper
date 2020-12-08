@@ -483,41 +483,83 @@ avg_imd_data = sum( precip1(:,:,153:365),3)/213;
 avg_trmm_data = sum(tprecip1(:,:,153:365),3)/213;
 avg_cmorph_data = sum(cprecip1(:,:,153:365),3)/213;
 avg_per_data = sum( pprecip1(:,:,153:365),3)/213;
- 
+
+binRange = 0:0.5:15;
+hc1 = histcounts(reshape(avg_imd_data(avg_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avg_trmm_data(avg_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avg_cmorph_data(avg_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avg_per_data(avg_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]')
 %%AVGREGION 1
 avgR1_imd_data = sum( precip1(23:31,79:87,153:365),3)/213;
 avgR1_trmm_data = sum(tprecip1(25:33,81:89,153:365),3)/213;
 avgR1_cmorph_data = sum(cprecip1(25:33,81:89,153:365),3)/213;
 avgR1_per_data = sum( pprecip1(23:31,79:87,153:365),3)/213;
- 
+binRange = 0:0.5:4;
+hc1 = histcounts(reshape(avgR1_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR1_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR1_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR1_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]') 
 %%AVGREGION 2
 avgR2_imd_data = sum( precip1(71:79,71:79,153:365),3);
 avgR2_trmm_data = sum( tprecip1(73:81,73:81,153:365),3);
 avgR2_cmorph_data = sum( cprecip1(73:81,73:81,153:365),3);
 avgR2_per_data = sum( pprecip1(71:79,71:79,153:365),3);
- 
+binRange = 0:2:40
+hc1 = histcounts(reshape(avgR2_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR2_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR2_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR2_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]') 
 %%AVGREGION 3
 avgR3_imd_data = sum( precip1(31:39,39:47,153:365),3)/213;
 avgR3_trmm_data = sum( tprecip1(33:41,41:49,153:365),3)/213;
 avgR3_cmorph_data = sum( cprecip1(33:41,41:49,153:365),3)/213;
 avgR3_per_data = sum( pprecip1(31:39,39:47,153:365),3)/213;
- 
+binRange = 0:0.5:5;
+hc1 = histcounts(reshape(avgR3_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR3_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR3_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR3_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]')  
 %%AVGREGION 4
 avgR4_imd_data = sum( precip1(43:51,15:23,153:365),3)/213;
 avgR4_trmm_data = sum( tprecip1(45:53,17:25,153:365),3)/213;
 avgR4_cmorph_data = sum( cprecip1(45:53,17:25,153:365),3)/213;
 avgR4_per_data = sum( pprecip1(43:51,15:23,153:365),3)/213;
- 
+binRange = 0:0.5:4;
+hc1 = histcounts(reshape(avgR4_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR4_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR4_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR4_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]')  
 %%AVGREGION 5
 avgR5_imd_data = sum( precip1(39:47,63:71,153:365),3)/213;
 avgR5_trmm_data = sum( tprecip1(41:49,65:73,153:365),3)/213;
 avgR5_cmorph_data = sum( cprecip1(41:49,65:73,153:365),3)/213;
 avgR5_per_data = sum( pprecip1(39:47,63:71,153:365),3)/213;
- 
+binRange = 0:0.5:4;
+hc1 = histcounts(reshape(avgR5_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR5_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR5_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR5_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]')  
 %%AVGREGION 6
 avgR6_imd_data = sum( precip1(46:54,39:47,153:365),3)/213;
 avgR6_trmm_data = sum( tprecip1(48:56,33:41,153:365),3)/213;
 avgR6_cmorph_data = sum( cprecip1(48:56,33:41,153:365),3)/213;
 avgR6_per_data = sum( pprecip1(46:54,39:47,153:365),3)/213;
-
-%% frequency of occurance graph
+binRange = 0:0.5:4;
+hc1 = histcounts(reshape(avgR6_imd_data(avgR1_imd_data>0),1,[]),[binRange Inf]);
+hc2 = histcounts(reshape(avgR6_trmm_data(avgR1_trmm_data>0),1,[]),[binRange Inf]);
+hc3 = histcounts(reshape(avgR6_cmorph_data(avgR1_cmorph_data>0),1,[]),[binRange Inf]);
+hc4 = histcounts(reshape(avgR6_per_data(avgR1_per_data>0),1,[]),[binRange Inf]);
+figure
+bar(binRange,[hc1;hc2;hc3;hc4]') 
